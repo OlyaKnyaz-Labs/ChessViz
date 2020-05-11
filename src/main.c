@@ -1,12 +1,15 @@
-//
-// Created by Ольга on 11.05.2020.
-//
-
 #include "board.h"
-#include "board_print_plain.c"
+
+#include "board_print_plain.h"
+
 
 int main()
 {
-    return 0;
+    char brd[8][8];
+ 
 
+    while (1) {
+        board_print(brd);
+        board(brd);
+    }
 }
