@@ -38,6 +38,6 @@ build/src/board_read.o: src/board_read.c src/board_read.h
 	$(MKDIR_BUILD)
 	$(OBJ)
 clean:
-	rm build/src/*	.o
+	rm build/src/*.o
 	rmdir  build/src
 	rmdir  build
