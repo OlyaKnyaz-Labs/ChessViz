@@ -3,10 +3,10 @@
 //
 
 #include "board.h"
-#include "board_print_plain.h"
+#include "board_print_plain.c"
 
 int main()
 {
+    return 0;
 
 }
-return 0;

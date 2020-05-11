@@ -13,7 +13,7 @@ all:binary/WChess.exe clean
 
 
 binary/WChess.exe: build/src/main.o build/src/board_read.o build/src/board_clear.o  build/src/board_start.o build/src/board_print_plain.o build/src/board.o
-    mkdir -p binary
+        mkdir -p binary
     $(CC) $^ -o $@ $(CFLAGS)
 
 build/src/main.o: src/main.c src/board.h
