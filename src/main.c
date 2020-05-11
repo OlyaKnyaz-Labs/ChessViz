@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include "board.h"
-#include "board_clear.h"
 #include "board_print_plain.h"
 #include "board_start.h"
 
