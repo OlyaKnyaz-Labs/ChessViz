@@ -15,7 +15,20 @@ void fig_move(char board[8][8], int move[])
     board[move[1]][move[0]] = ' ';
     board[move[3]][move[2]] = temp;
 }
-
+void board_start(char board[8][8])
+{
+    char reg = 32; //смена регистра СМЕНЯЕТ БУКВУ НА ЗАГЛАВНУЮ
+    char fig[] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'};
+    for (int j = 0; j < 8; ++j) {
+        board[0][j] = fig[j];
+        board[7][j] = fig[j] - reg;
+        board[1][j] = 'p';
+        board[6][j] = 'p' - reg;
+        for (int i = 2; i < 6; ++i) {
+            board[i][j] = ' ';
+        }
+    }
+}
 int check_move(char deck[8][8], int move[])
 {
     switch (deck[move[1]][move[0]]) {
