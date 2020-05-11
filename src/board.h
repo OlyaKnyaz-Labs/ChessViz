@@ -4,5 +4,7 @@
 
 #ifndef CHESSVIZ_BOARD_H
 #define CHESSVIZ_BOARD_H
-
+int pawn(char deck[8][8], int move[], char tm);
+void board(char deck[8][8]);
+int check_move(char deck[8][8], int move[]);
 #endif //CHESSVIZ_BOARD_H
