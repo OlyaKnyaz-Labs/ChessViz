@@ -19,7 +19,7 @@ binary/WChess.exe: build/src/main.o build/src/board_read.o  build/src/board_prin
 
 binary/WChess_test.exe: build/Test/main.o build/Test/test_mod.o build/src/board_print_plain.o build/src/board_start.o build/src/board.o build/src/board_read.o
 	mkdir -p binary
-	$(CC) $^ -o $@ $(CFLAGS)
+	$(CC) $^ -o $@ -Wall
 
 build/Test/main.o: Test/main.c thirdparty/ctest.h src/board.h Test/test_mod.h
 	mkdir -p build/Test
