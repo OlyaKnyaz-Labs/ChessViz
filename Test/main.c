@@ -1,7 +1,5 @@
 #include <board.h>
 #include <board_read.h>
-#include <board_start.h>
-
 #include <ctest.h>
 #include <test_mod.h>
 int main()
