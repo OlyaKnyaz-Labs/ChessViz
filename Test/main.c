@@ -5,8 +5,6 @@
 #include "test_mod.h"
 #include <board.h>
 #include <board_read.h>
-#include <board_start.h>
-
 #include <ctest.h>
 CTEST(Syntax, Correct)
 {
