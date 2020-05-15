@@ -21,7 +21,7 @@ binary/WChess_test.exe: build/Test/main.o build/Test/test_mod.o build/src/board_
 	mkdir -p binary
 	$(CC) $^ -o $@ $(CFLAGS)
 
-build/Test/main.o: Test/mainс.c thirdparty/ctest.h src/board.h Test/test_mod.h
+build/Test/main.o: Test/main.c thirdparty/ctest.h src/board.h Test/test_mod.h
 	mkdir -p build/Test
 	$(OBJ) -I thirdparty -I src
 build/Test/test_mod.o: Test/test_mod.c thirdparty/ctest.h src/board.h Test/test_mod.h
