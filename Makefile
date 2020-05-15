@@ -17,14 +17,14 @@ binary/WChess.exe: build/src/main.o build/src/board_read.o  build/src/board_prin
 	mkdir -p binary
 	$(CC) $^ -o $@ $(CFLAGS)
 
-binary/WChess_test.exe: build/Test/main.o build/Test/test_module.o build/src/board_print_plain.o build/src/board_start.o build/src/board.o build/src/board_read.o
+binary/WChess_test.exe: build/Test/main.o build/Test/test_mod.o build/src/board_print_plain.o build/src/board_start.o build/src/board.o build/src/board_read.o
 	mkdir -p binary
 	$(CC) $^ -o $@ $(CFLAGS)
 
-build/Test/main.o: Test/mainс.c thirdparty/ctest.h src/board.h Test/test_module.h
+build/Test/main.o: Test/mainс.c thirdparty/ctest.h src/board.h Test/test_mod.h
 	mkdir -p build/Test
 	$(OBJ) -I thirdparty -I src
-build/Test/test_module.o: Test/test_module.c thirdparty/ctest.h src/board.h Test/test_module.h
+build/Test/test_mod.o: Test/test_mod.c thirdparty/ctest.h src/board.h Test/test_mod.h
 	mkdir -p build/Test
 	$(OBJ) -I thirdparty -I src
 
