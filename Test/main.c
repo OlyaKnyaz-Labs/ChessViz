@@ -5,7 +5,6 @@
 #include "test_mod.h"
 #include <board.h>
 #include <board_read.h>
-#include <ctest.h>
 CTEST(Syntax, Correct)
 {
 int RES = check_input("b2-b5");
