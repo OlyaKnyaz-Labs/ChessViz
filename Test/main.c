@@ -1,7 +1,8 @@
 #include <board.h>
 #include <board_read.h>
 #include <ctest.h>
-#include <test_mod.h>
+#include "test_mod.h"
+
 int main()
 {
     CTEST(Syntax, Correct);
