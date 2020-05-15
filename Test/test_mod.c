@@ -1,9 +1,6 @@
 
-#define CTEST_MAIN
-
 #include <board.h>
 #include <board_read.h>
-#include <board_start.h>
 
 #include <ctest.h>
 
@@ -32,6 +29,7 @@ int result = pawn(deck, move, 0);
 int expected = 0;
 ASSERT_EQUAL(expected, result);
 }
+
 CTEST(pawn, Incorrect)
 {
 char deck[8][8];
@@ -67,4 +65,3 @@ int result = check_move(deck, move);
 int expected = 1;
 ASSERT_EQUAL(expected, result);
 }
-

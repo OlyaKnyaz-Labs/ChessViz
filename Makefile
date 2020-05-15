@@ -1,10 +1,9 @@
 ODIR = build/
 OBJ = $(CC) -c $< -o $@ $(CFLAGS)
 MKDIR_BUILD = mkdir -p build/src
-
 CC=gcc
 CFLAGS =  -Wall -Werror
-SOURCES=src/main.cpp src/board_print_plain.c src/board_read.c  src/board_movement.c	
+SOURCES=src/main.cpp src/board_print_plain.c src/board_read.c
 
 .PHONY:all Test clean
 
@@ -17,7 +16,7 @@ binary/WChess.exe: build/src/main.o build/src/board_read.o  build/src/board_prin
 	mkdir -p binary
 	$(CC) $^ -o $@ $(CFLAGS)
 
-binary/WChess_test.exe: build/Test/main.o build/Test/test_mod.o build/src/board_print_plain.o build/src/board_start.o build/src/board.o build/src/board_read.o
+binary/WChess_test.exe: build/Test/main.o build/Test/test_mod.o build/src/board_print_plain.o  build/src/board.o build/src/board_read.o
 	mkdir -p binary
 	$(CC) $^ -o $@ -Wall
 
@@ -50,5 +49,7 @@ build/src/board_read.o: src/board_read.c src/board_read.h
 	$(OBJ)
 clean:
 	rm build/src/*.o
+	rm build/Test/*.o
+	rmdir  build/Test
 	rmdir  build/src
 	rmdir  build
